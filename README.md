@@ -14,6 +14,10 @@
 2. 入力フォームを進める
 3. Step 4で診断結果を確認する
 
+公開URL:
+
+- https://fixed-cost-checker.vercel.app/
+
 Next.js化する場合は、このMVPのHTML構造を `app/page.tsx`、計算ロジックを `lib/calculator.ts`、入力UIを `components/` に分割する想定です。
 
 ## 計算ロジック

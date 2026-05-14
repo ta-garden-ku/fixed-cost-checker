@@ -88,11 +88,11 @@ CTA:
 
 ## リッチメニュー案
 
-- 診断する: `index.html#diagnosis`
-- 結果を保存: `line.html`
-- 無料相談: `consultation.html`
-- おすすめサービス: `recommended-services.html`
-- PDFレポート: `paid-report.html`
+- 診断する: `https://fixed-cost-checker.vercel.app/#diagnosis`
+- 結果を保存: `https://fixed-cost-checker.vercel.app/line`
+- 無料相談: `https://fixed-cost-checker.vercel.app/consultation`
+- おすすめサービス: `https://fixed-cost-checker.vercel.app/recommended-services`
+- PDFレポート: `https://fixed-cost-checker.vercel.app/paid-report`
 
 ## site-config.js の差し替え場所
 
