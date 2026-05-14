@@ -1,0 +1,94 @@
+<!doctype html>
+<html lang="ja">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>詳細PDFレポート｜固定費削減診断</title>
+    <meta
+      name="description"
+      content="固定費削減診断の結果をPDFレポートとして保存。見直し優先順位、サブスク整理表、家族共有用チェックリストをまとめられます。"
+    />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <header class="site-header">
+      <a class="brand" href="index.html">
+        <span class="brand-mark">¥</span>
+        <span>固定費削減診断</span>
+      </a>
+      <nav aria-label="主要ナビゲーション">
+        <a href="index.html#diagnosis">診断に戻る</a>
+        <a href="consultation.html">無料相談</a>
+        <a href="recommended-services.html">おすすめサービス</a>
+      </nav>
+      <a class="header-cta" href="#reportOrder">レポートを見る</a>
+    </header>
+
+    <main class="conversion-page">
+      <section class="conversion-hero report-hero">
+        <p class="eyebrow">Premium Report</p>
+        <h1>診断結果を、家族と共有できる見直しレポートに。</h1>
+        <p class="lead">
+          その場で終わりがちな診断結果を、見直し順・削減候補・サブスク一覧・10年インパクトつきで保存できる有料PDFにします。
+        </p>
+        <div class="price-box">
+          <span>MVP価格</span>
+          <strong>980円</strong>
+          <small>本番では決済サービスに接続します</small>
+        </div>
+      </section>
+
+      <section class="conversion-layout" id="reportOrder">
+        <div class="result-card">
+          <p class="eyebrow">Included</p>
+          <h2>PDFに含める内容</h2>
+          <ul class="reason-list">
+            <li><b>診断サマリー</b><span>固定費総額、年間コスト、固定費比率、家計危険度。</span></li>
+            <li><b>見直し優先順位</b><span>スマホ、保険、光熱費、サブスクなどのトップ3。</span></li>
+            <li><b>サブスク整理表</b><span>年額、5年、10年コスト、解約優先度。</span></li>
+            <li><b>家族共有チェックリスト</b><span>週末に確認する項目を1枚に整理。</span></li>
+          </ul>
+        </div>
+
+        <form class="lead-form">
+          <div class="form-head">
+            <span>Order</span>
+            <h2>レポート作成を予約する</h2>
+            <p>今は仮予約です。本番ではStripe、PayPal、codoc、noteなどに接続できます。</p>
+          </div>
+          <label class="field">
+            <span>メールアドレス</span>
+            <input type="email" required placeholder="sample@example.com" />
+          </label>
+          <label class="field">
+            <span>レポートで特に見たい項目</span>
+            <select>
+              <option>見直し優先順位</option>
+              <option>サブスク整理</option>
+              <option>保険・通信費</option>
+              <option>家計全体</option>
+            </select>
+          </label>
+          <button class="button primary" type="submit">PDFレポートを予約する</button>
+          <p class="form-message" aria-live="polite"></p>
+          <p class="notice">本番公開時は、決済完了後にPDF生成またはメール送付へ接続します。</p>
+        </form>
+      </section>
+
+      <section class="final-cta">
+        <p class="eyebrow">Free Option</p>
+        <h2>まず無料で相談したい人は、診断結果をもとに相談できます。</h2>
+        <a class="button primary" href="consultation.html">無料相談を見る</a>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <p>
+        本レポートは家計の見直しを補助するための概算資料です。投資・保険・通信契約等の最終判断はご自身の責任で行ってください。
+      </p>
+      <small>© 固定費削減診断</small>
+    </footer>
+    <script src="lead.js"></script>
+    <script src="tracking.js"></script>
+  </body>
+</html>

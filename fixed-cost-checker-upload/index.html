@@ -1,0 +1,453 @@
+<!doctype html>
+<html lang="ja">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>固定費削減診断｜サブスク・スマホ代・保険の年間ムダ支出をチェック</title>
+    <meta
+      name="description"
+      content="スマホ代、保険、光熱費、サブスクなどの固定費を無料診断。毎月の支出から年間コストと削減可能性を見える化します。"
+    />
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="固定費削減診断｜年間ムダ支出を無料チェック" />
+    <meta
+      property="og:description"
+      content="毎月なんとなく払っている固定費とサブスクを入力するだけ。年間・10年コストと見直し優先度を可視化します。"
+    />
+    <meta property="og:image" content="https://example.com/ogp-fixed-cost-checker.png" />
+    <meta property="og:locale" content="ja_JP" />
+    <link rel="canonical" href="https://example.com/fixed-cost-checker" />
+    <link rel="stylesheet" href="styles.css" />
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "FAQPage",
+        "mainEntity": [
+          {
+            "@type": "Question",
+            "name": "診断は無料ですか？",
+            "acceptedAnswer": { "@type": "Answer", "text": "はい、無料で利用できます。" }
+          },
+          {
+            "@type": "Question",
+            "name": "個人情報の入力は必要ですか？",
+            "acceptedAnswer": { "@type": "Answer", "text": "診断だけなら名前や住所の入力は不要です。" }
+          },
+          {
+            "@type": "Question",
+            "name": "正確な削減額がわかりますか？",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "表示される金額は入力内容にもとづく概算です。実際の削減額は契約内容によって異なります。"
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "どの固定費を見直すべきですか？",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "一般的にはスマホ代、保険料、サブスク、通信費、光熱費などが見直しやすい項目です。"
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "相談すると勧誘されますか？",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "無理な勧誘がないことを明記し、診断結果をもとに必要な範囲だけ相談できる導線にしています。"
+            }
+          }
+        ]
+      }
+    </script>
+  </head>
+  <body>
+    <header class="site-header">
+      <a class="brand" href="#top" aria-label="固定費削減診断トップ">
+        <span class="brand-mark">¥</span>
+        <span>固定費削減診断</span>
+      </a>
+      <nav aria-label="主要ナビゲーション">
+        <a href="#diagnosis">無料診断</a>
+        <a href="#results">結果例</a>
+        <a href="#faq">FAQ</a>
+      </nav>
+      <a class="header-cta" href="#diagnosis">1分でチェック</a>
+    </header>
+
+    <main id="top">
+      <section class="hero-section">
+        <div class="hero-copy">
+          <p class="eyebrow">固定費 削減・サブスク 年間コスト診断</p>
+          <h1>あなたの固定費、年間いくらムダになっているか知っていますか？</h1>
+          <p class="lead">
+            スマホ代、保険、サブスク、光熱費。毎月なんとなく払っている支出を診断して、削減できる可能性を見える化します。
+          </p>
+          <div class="hero-actions">
+            <a class="button primary" href="#diagnosis">無料で診断する</a>
+            <a class="button secondary" href="#impact">1分で年間コストを見る</a>
+          </div>
+          <ul class="trust-list" aria-label="安心材料">
+            <li>名前・住所の入力なし</li>
+            <li>診断だけなら無料</li>
+            <li>結果をもとに相談可能</li>
+          </ul>
+        </div>
+        <aside class="hero-dashboard" aria-label="診断結果のイメージ">
+          <div class="mini-result">
+            <span>削減可能性</span>
+            <strong>年間 126,000円</strong>
+          </div>
+          <div class="mini-chart" aria-hidden="true">
+            <span style="height: 38%"></span>
+            <span style="height: 62%"></span>
+            <span style="height: 84%"></span>
+            <span style="height: 48%"></span>
+          </div>
+          <div class="mini-grid">
+            <div>
+              <span>10年で</span>
+              <b>126万円</b>
+            </div>
+            <div>
+              <span>危険度</span>
+              <b>72/100</b>
+            </div>
+          </div>
+        </aside>
+      </section>
+
+      <section class="section two-column">
+        <div>
+          <p class="eyebrow">What You Get</p>
+          <h2>診断でわかること</h2>
+          <p>
+            入力した固定費から、毎月・年間・10年の負担をまとめて可視化します。見直し候補は優先順位つきで出すので、何から動けばいいか迷いにくくなります。
+          </p>
+        </div>
+        <div class="feature-grid">
+          <div class="feature-card">
+            <b>年間固定費</b>
+            <span>月額だけでは見えにくい支出の重さを年額で表示</span>
+          </div>
+          <div class="feature-card">
+            <b>サブスク棚卸し</b>
+            <span>利用頻度から解約・見直し候補を自動判定</span>
+          </div>
+          <div class="feature-card">
+            <b>家計危険度</b>
+            <span>固定費比率、貯金額、未使用サブスクから算出</span>
+          </div>
+          <div class="feature-card">
+            <b>将来インパクト</b>
+            <span>削減額を貯金・運用した場合の概算も表示</span>
+          </div>
+        </div>
+      </section>
+
+      <section class="section proof-strip" id="impact">
+        <div>
+          <span>毎月 8,000円の見直し</span>
+          <strong>年間 96,000円</strong>
+        </div>
+        <div>
+          <span>5年では</span>
+          <strong>480,000円</strong>
+        </div>
+        <div>
+          <span>10年では</span>
+          <strong>960,000円</strong>
+        </div>
+      </section>
+
+      <section class="section">
+        <div class="section-heading">
+          <p class="eyebrow">Common Waste</p>
+          <h2>よくある固定費のムダ例</h2>
+        </div>
+        <div class="waste-grid">
+          <article>
+            <span>スマホ代</span>
+            <b>家族全員で高い旧プランのまま</b>
+            <p>8,000円以上なら、料金プランの比較だけで削減余地が見つかることがあります。</p>
+          </article>
+          <article>
+            <span>保険料</span>
+            <b>重複保障や不要な特約</b>
+            <p>一度見直すだけで長期的な効果が大きく、家計の固定圧を下げやすい項目です。</p>
+          </article>
+          <article>
+            <span>サブスク</span>
+            <b>ほぼ使っていない月額課金</b>
+            <p>月額980円でも10年で117,600円。小さな支出ほど見落としやすくなります。</p>
+          </article>
+        </div>
+      </section>
+
+      <section class="diagnosis-section" id="diagnosis">
+        <div class="section-heading compact">
+          <p class="eyebrow">Free Check</p>
+          <h2>1分で固定費を診断</h2>
+          <p>名前や住所は不要です。わかる範囲で入力して、まずは削減できる可能性を確認できます。</p>
+        </div>
+
+        <div class="stepper" aria-label="診断ステップ">
+          <button class="step-tab active" type="button" data-step-target="1">1 基本情報</button>
+          <button class="step-tab" type="button" data-step-target="2">2 固定費</button>
+          <button class="step-tab" type="button" data-step-target="3">3 サブスク</button>
+          <button class="step-tab" type="button" data-step-target="4">4 診断結果</button>
+        </div>
+
+        <form class="diagnosis-form" id="diagnosisForm">
+          <section class="form-step active" data-step="1" aria-labelledby="step1Title">
+            <div class="form-head">
+              <span>Step 1</span>
+              <h3 id="step1Title">基本情報</h3>
+            </div>
+            <div class="input-grid">
+              <label class="field">
+                <span>世帯タイプ</span>
+                <select id="household">
+                  <option value="single">一人暮らし</option>
+                  <option value="couple">夫婦</option>
+                  <option value="family">子育て世帯</option>
+                  <option value="parents">実家暮らし</option>
+                </select>
+              </label>
+              <label class="field">
+                <span>年齢層</span>
+                <select id="ageGroup">
+                  <option value="20s">20代</option>
+                  <option value="30s" selected>30代</option>
+                  <option value="40s">40代</option>
+                  <option value="50s">50代以上</option>
+                </select>
+              </label>
+              <label class="field">
+                <span>毎月の手取り収入</span>
+                <input id="income" type="number" min="0" step="1000" inputmode="numeric" value="320000" />
+              </label>
+              <label class="field">
+                <span>毎月の貯金額</span>
+                <input id="savings" type="number" min="0" step="1000" inputmode="numeric" value="20000" />
+              </label>
+            </div>
+          </section>
+
+          <section class="form-step" data-step="2" aria-labelledby="step2Title">
+            <div class="form-head">
+              <span>Step 2</span>
+              <h3 id="step2Title">固定費</h3>
+            </div>
+            <div class="input-grid dense">
+              <label class="field"><span>家賃・住宅ローン</span><input id="housing" type="number" min="0" step="1000" value="85000" /></label>
+              <label class="field"><span>スマホ代</span><input id="mobile" type="number" min="0" step="100" value="9000" /></label>
+              <label class="field"><span>インターネット代</span><input id="internet" type="number" min="0" step="100" value="6200" /></label>
+              <label class="field"><span>電気代</span><input id="electric" type="number" min="0" step="100" value="11000" /></label>
+              <label class="field"><span>ガス代</span><input id="gas" type="number" min="0" step="100" value="7000" /></label>
+              <label class="field"><span>水道代</span><input id="water" type="number" min="0" step="100" value="4200" /></label>
+              <label class="field"><span>保険料</span><input id="insurance" type="number" min="0" step="100" value="18000" /></label>
+              <label class="field"><span>車関連費</span><input id="car" type="number" min="0" step="100" value="26000" /></label>
+              <label class="field"><span>ジム・習い事</span><input id="gym" type="number" min="0" step="100" value="8800" /></label>
+              <label class="field"><span>動画サブスク</span><input id="videoSub" type="number" min="0" step="100" value="1590" /></label>
+              <label class="field"><span>音楽サブスク</span><input id="musicSub" type="number" min="0" step="100" value="1080" /></label>
+              <label class="field"><span>漫画・電子書籍</span><input id="mangaSub" type="number" min="0" step="100" value="980" /></label>
+              <label class="field"><span>学習系サブスク</span><input id="learningSub" type="number" min="0" step="100" value="0" /></label>
+              <label class="field"><span>クラウド・アプリ</span><input id="cloudSub" type="number" min="0" step="100" value="680" /></label>
+              <label class="field full"><span>その他固定費</span><input id="otherFixed" type="number" min="0" step="100" value="5000" /></label>
+            </div>
+          </section>
+
+          <section class="form-step" data-step="3" aria-labelledby="step3Title">
+            <div class="form-head">
+              <span>Step 3</span>
+              <h3 id="step3Title">サブスク詳細</h3>
+              <p>最大10件まで追加できます。定番サービスも、ニッチな月額課金も自由に入力できます。</p>
+            </div>
+            <div class="preset-row">
+              <label class="field">
+                <span>よくあるサブスク</span>
+                <select id="presetService"></select>
+              </label>
+              <button class="button secondary" id="addPreset" type="button">候補から追加</button>
+              <button class="button ghost" id="addCustom" type="button">自由入力を追加</button>
+            </div>
+            <div class="subscription-list" id="subscriptionList"></div>
+            <p class="helper" id="subLimitText">あと8件追加できます。</p>
+          </section>
+
+          <section class="form-step result-step" data-step="4" id="results" aria-labelledby="step4Title">
+            <div class="result-hero">
+              <div>
+                <span class="eyebrow">Your Result</span>
+                <h3 id="step4Title">診断サマリー</h3>
+                <p id="mainComment">入力内容をもとに、見直し候補を計算しています。</p>
+              </div>
+              <div class="danger-ring" id="dangerRing">
+                <span>危険度</span>
+                <strong id="dangerScore">0</strong>
+              </div>
+            </div>
+
+            <div class="result-grid">
+              <div class="metric-card emphasis"><span>削減可能性 年額</span><strong id="possibleYearly">0円</strong></div>
+              <div class="metric-card"><span>毎月の固定費総額</span><strong id="fixedMonthly">0円</strong></div>
+              <div class="metric-card"><span>年間固定費総額</span><strong id="fixedYearly">0円</strong></div>
+              <div class="metric-card"><span>サブスク年間総額</span><strong id="subYearly">0円</strong></div>
+              <div class="metric-card"><span>固定費比率</span><strong id="fixedRatio">0%</strong></div>
+              <div class="metric-card"><span>貯蓄余力スコア</span><strong id="savingScore">0</strong></div>
+            </div>
+
+            <div class="conversion-box">
+              <div>
+                <span>毎月 <b id="monthlyPhrase">0円</b> の削減は</span>
+                <strong>年間 <b id="yearlyPhrase">0円</b>、10年で <b id="tenYearPhrase">0円</b></strong>
+              </div>
+              <a class="button primary" href="consultation.html">無料で固定費の見直し相談をする</a>
+              <small>相談は無料です。無理な勧誘はありません。</small>
+            </div>
+
+            <div class="result-columns">
+              <section class="result-card">
+                <h4>優先して見直すべき項目トップ3</h4>
+                <ol class="priority-list" id="priorityList"></ol>
+              </section>
+              <section class="result-card">
+                <h4>今すぐ見直すべき理由</h4>
+                <ul class="reason-list" id="reasonList"></ul>
+              </section>
+            </div>
+
+            <section class="result-card">
+              <h4>サブスク年間コスト</h4>
+              <div class="table-wrap">
+                <table>
+                  <thead>
+                    <tr>
+                      <th>サービス</th>
+                      <th>月額</th>
+                      <th>年額</th>
+                      <th>5年</th>
+                      <th>10年</th>
+                      <th>優先度</th>
+                    </tr>
+                  </thead>
+                  <tbody id="subscriptionTable"></tbody>
+                </table>
+              </div>
+            </section>
+
+            <section class="result-card">
+              <h4>将来インパクト</h4>
+              <div class="future-grid">
+                <div><span>1年で浮く金額</span><strong id="impact1y">0円</strong></div>
+                <div><span>5年で浮く金額</span><strong id="impact5y">0円</strong></div>
+                <div><span>10年で浮く金額</span><strong id="impact10y">0円</strong></div>
+                <div><span>年利3%の10年後概算</span><strong id="impact3p">0円</strong></div>
+                <div><span>年利5%の10年後概算</span><strong id="impact5p">0円</strong></div>
+              </div>
+              <p class="notice">投資助言ではなく、削減できた金額を毎月積み立てた場合の概算シミュレーションです。</p>
+            </section>
+
+            <section class="cta-grid">
+              <a href="line.html">
+                <span>LINEで診断結果を保存する</span>
+                <b>あとで家族と見返せます</b>
+              </a>
+              <a href="consultation.html">
+                <span>削減できそうな項目をプロに相談する</span>
+                <b>診断結果をもとに相談できます</b>
+              </a>
+              <a href="recommended-services.html">
+                <span>おすすめの見直しサービスを見る</span>
+                <b>スマホ・保険・光熱費の比較へ</b>
+              </a>
+              <a href="paid-report.html">
+                <span>詳細PDFレポートを作成する</span>
+                <b>家計の見直し順を保存できます</b>
+              </a>
+            </section>
+
+            <section class="result-card sequence-card">
+              <h4>LINE登録後のステップ配信イメージ</h4>
+              <ol>
+                <li><b>登録直後</b><span>診断結果の保存リンクとトップ3の見直しチェックリスト</span></li>
+                <li><b>翌日</b><span>スマホ代・通信費の見直し手順</span></li>
+                <li><b>3日後</b><span>保険・光熱費の確認ポイント</span></li>
+                <li><b>7日後</b><span>無料相談または有料PDFレポートの案内</span></li>
+              </ol>
+            </section>
+
+            <p class="disclaimer">
+              本診断は入力内容にもとづく概算シミュレーションです。実際の削減額や契約条件は各サービス・契約内容によって異なります。投資・保険・通信契約等に関する最終判断は、ご自身の責任で行ってください。
+            </p>
+          </section>
+
+          <div class="form-actions">
+            <button class="button ghost" id="prevStep" type="button">戻る</button>
+            <button class="button primary" id="nextStep" type="button">次へ進む</button>
+          </div>
+        </form>
+      </section>
+
+      <section class="section">
+        <div class="section-heading">
+          <p class="eyebrow">Conversion Design</p>
+          <h2>相談前に押し売りしない導線</h2>
+          <p>
+            まず数字で現状を知ってもらい、結果を見た後にだけ相談・LINE保存・おすすめサービスを提示します。
+          </p>
+        </div>
+        <div class="monetize-grid">
+          <div><b>保険見直し相談</b><span>保険料が高いユーザーに自然表示</span></div>
+          <div><b>格安SIM・回線比較</b><span>スマホ代・通信費が高いユーザー向け</span></div>
+          <div><b>光熱費の切り替え</b><span>電気ガス水道が重い世帯に提案</span></div>
+          <div><b>有料PDFレポート</b><span>診断結果を保存したい人向け</span></div>
+        </div>
+      </section>
+
+      <section class="section faq-section" id="faq">
+        <div class="section-heading">
+          <p class="eyebrow">FAQ</p>
+          <h2>よくある質問</h2>
+        </div>
+        <details open>
+          <summary>診断は無料ですか？</summary>
+          <p>はい、無料で利用できます。</p>
+        </details>
+        <details>
+          <summary>個人情報の入力は必要ですか？</summary>
+          <p>診断だけなら名前や住所の入力は不要です。</p>
+        </details>
+        <details>
+          <summary>正確な削減額がわかりますか？</summary>
+          <p>表示される金額は入力内容にもとづく概算です。実際の削減額は契約内容によって異なります。</p>
+        </details>
+        <details>
+          <summary>どの固定費を見直すべきですか？</summary>
+          <p>一般的にはスマホ代、保険料、サブスク、通信費、光熱費などが見直しやすい項目です。</p>
+        </details>
+        <details>
+          <summary>相談すると勧誘されますか？</summary>
+          <p>無理な勧誘がないことを明記したうえで、安心して相談できる導線にしています。</p>
+        </details>
+      </section>
+
+      <section class="final-cta">
+        <p class="eyebrow">Start Now</p>
+        <h2>毎月の「なんとなく支出」を、今日いちど見える化しませんか。</h2>
+        <a class="button primary" href="#diagnosis">無料で固定費を診断する</a>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <p>
+        本診断は入力内容にもとづく概算シミュレーションです。実際の削減額や契約条件は各サービス・契約内容によって異なります。投資・保険・通信契約等に関する最終判断は、ご自身の責任で行ってください。
+      </p>
+      <small>© 固定費削減診断</small>
+    </footer>
+
+    <script src="script.js"></script>
+    <script src="tracking.js"></script>
+  </body>
+</html>
