@@ -10,5 +10,14 @@ document.querySelectorAll("a, button").forEach((element) => {
       at: new Date().toISOString(),
     });
     localStorage.setItem("fixedCostCtaEvents", JSON.stringify(events.slice(-100)));
+
+    if (typeof window.gtag === "function") {
+      window.gtag("event", "cta_click", {
+        event_category: "engagement",
+        event_label: label,
+        link_url: href,
+        page_path: location.pathname,
+      });
+    }
   });
 });

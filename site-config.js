@@ -1,4 +1,5 @@
 window.SiteConfig = {
+  gaMeasurementId: "G-L7CVQ3YTY9",
   lineOfficialUrl: "https://lin.ee/tV1kkvT",
   affiliate: {
     sim: "https://example.com/affiliate/sim",
