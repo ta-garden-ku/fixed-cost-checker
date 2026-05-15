@@ -91,8 +91,24 @@ CTA:
 - 診断する: `https://fixed-cost-checker.vercel.app/#diagnosis`
 - 結果を保存: `https://fixed-cost-checker.vercel.app/line`
 - 無料相談: `https://fixed-cost-checker.vercel.app/consultation`
+- 相談後の次のステップ: `https://fixed-cost-checker.vercel.app/thanks`
 - おすすめサービス: `https://fixed-cost-checker.vercel.app/recommended-services`
 - PDFレポート: `https://fixed-cost-checker.vercel.app/paid-report`
+
+## Googleフォーム送信後メッセージ
+
+Googleフォームの `設定` → `プレゼンテーション` → `確認メッセージ` に以下を入れます。
+
+```text
+送信ありがとうございます。
+
+回答内容を確認し、必要に応じてご連絡します。
+
+このまま終わると診断結果を忘れやすいので、次のページで「LINE保存」または「見直しサービス」を確認しておくのがおすすめです。
+
+▼送信後の次のステップ
+https://fixed-cost-checker.vercel.app/thanks
+```
 
 ## site-config.js の差し替え場所
 

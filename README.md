@@ -49,6 +49,7 @@ Next.js化する場合は、このMVPのHTML構造を `app/page.tsx`、計算ロ
 - `line.html`: LINE保存とステップ配信の説明ページ
 - `recommended-services.html`: スマホ、保険、光熱費、回線などの仮アフィリエイト導線
 - `paid-report.html`: 有料PDFレポート販売の仮ページ
+- `thanks.html`: Googleフォーム送信後に案内する次のステップページ
 - `lead.js`: 仮フォーム送信時の完了メッセージ表示
 - `site-config.js`: LINE URL、アフィリエイトURLなどの差し替え設定
 - `link-config.js`: 設定ファイルのURLをページ内リンクへ反映
@@ -63,8 +64,9 @@ Next.js化する場合は、このMVPのHTML構造を `app/page.tsx`、計算ロ
 2. 友だち追加URLを取得
 3. `site-config.js` の `lineOfficialUrl` を差し替え
 4. `LINE_SETUP.md` のあいさつメッセージとステップ配信をLINE管理画面へ登録
-5. `recommended-services.html` の仮アフィリエイトURLを本物に差し替え
-6. Google Analyticsなどを入れ、`tracking.js` の仮ログを本番計測に置き換え
+5. Googleフォームの確認メッセージに `https://fixed-cost-checker.vercel.app/thanks` を入れる
+6. `recommended-services.html` の仮アフィリエイトURLを本物に差し替え
+7. Google Analyticsなどを入れ、`tracking.js` の仮ログを本番計測に置き換え
 
 ## CVR改善用コピー案
 
