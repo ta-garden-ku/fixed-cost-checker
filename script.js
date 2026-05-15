@@ -336,6 +336,26 @@ function renderResults() {
   $("impact3p").textContent = yen(result.future3);
   $("impact5p").textContent = yen(result.future5);
 
+  localStorage.setItem(
+    "fixedCostLatestResult",
+    JSON.stringify({
+      savedAt: new Date().toISOString(),
+      possibleMonthly: yen(result.possibleMonthly),
+      possibleYearly: yen(result.possibleYearly),
+      tenYearImpact: yen(result.possibleYearly * 10),
+      fixedMonthly: yen(result.fixedMonthly),
+      fixedYearly: yen(result.fixedYearly),
+      subYearly: yen(result.subYearly),
+      fixedRatio: `${result.fixedRatio.toFixed(1)}%`,
+      dangerScore: result.dangerScore,
+      priorities: result.opportunities.slice(0, 3).map((item) => ({
+        key: item.key,
+        monthly: yen(item.monthly),
+        reason: item.reason,
+      })),
+    }),
+  );
+
   $("priorityList").innerHTML = result.opportunities.length
     ? result.opportunities
         .slice(0, 3)

@@ -6,8 +6,9 @@
     <title>LINEで診断結果を保存｜固定費削減診断</title>
     <meta
       name="description"
-      content="固定費削減診断の結果をLINEで保存し、スマホ代・保険・光熱費・サブスク見直しのステップ配信を受け取れます。"
+      content="固定費削減診断の結果をコピーしてLINEに保存できます。スマホ代・保険・光熱費・サブスクの見直し手順も受け取れます。"
     />
+    <link rel="canonical" href="https://fixed-cost-checker.vercel.app/line" />
     <link rel="stylesheet" href="styles.css" />
   </head>
   <body>
@@ -21,38 +22,60 @@
         <a href="consultation.html">無料相談</a>
         <a href="paid-report.html">PDFレポート</a>
       </nav>
-      <a class="header-cta" href="#lineFlow">保存の流れ</a>
+      <a class="header-cta" href="#saveResult">結果を保存</a>
     </header>
 
     <main class="conversion-page">
       <section class="conversion-hero line-hero">
         <p class="eyebrow">LINE Save</p>
-        <h1>診断結果をLINEに保存して、見直しを後回しにしない。</h1>
+        <h1>診断結果をコピーして、LINEに残しておきましょう。</h1>
         <p class="lead">
-          結果を見て終わりにせず、翌日から少しずつ固定費を整えるためのチェックリストを受け取れます。
+          LINEの友だち追加ボタンは、公式アカウントを開くためのボタンです。診断結果を保存するには、下の「結果をコピー」または「LINEで共有」を使ってください。
         </p>
         <div class="hero-actions">
-          <a class="button primary" href="https://lin.ee/tV1kkvT" data-link-key="lineOfficial" target="_blank" rel="noopener">LINEで診断結果を保存する</a>
-          <a class="button secondary" href="consultation.html">無料相談も見る</a>
+          <a class="button primary" href="#saveResult">診断結果を保存する</a>
+          <a class="button secondary" href="https://lin.ee/tV1kkvT" data-link-key="lineOfficial" target="_blank" rel="noopener">LINE公式を開く</a>
         </div>
-        <p class="notice">本番公開時に、実際のLINE公式アカウントURLへ差し替えてください。</p>
+      </section>
+
+      <section class="conversion-layout" id="saveResult">
+        <div class="result-card saved-summary">
+          <p class="eyebrow">Saved Result</p>
+          <h2>保存する診断結果</h2>
+          <p class="notice" id="savedResultNotice">
+            診断結果を読み込んでいます。
+          </p>
+          <pre class="summary-text" id="savedResultText"></pre>
+          <div class="hero-actions">
+            <button class="button primary" id="copySavedResult" type="button">結果をコピー</button>
+            <a class="button secondary" id="shareSavedResult" href="https://line.me/R/share?text=" target="_blank" rel="noopener">LINEで共有</a>
+          </div>
+          <p class="form-message" id="copySavedStatus" aria-live="polite"></p>
+        </div>
+
+        <aside class="conversion-side">
+          <div class="result-card">
+            <h2>保存の流れ</h2>
+            <ul class="reason-list">
+              <li><b>1. 結果をコピー</b><span>このページに表示された診断結果をコピーします。</span></li>
+              <li><b>2. LINEを開く</b><span>自分のメモ、家族、または公式アカウントのトークに貼り付けます。</span></li>
+              <li><b>3. あとで見返す</b><span>スマホ代・保険・光熱費・サブスクの順に確認できます。</span></li>
+            </ul>
+          </div>
+          <a class="button primary wide" href="https://lin.ee/tV1kkvT" data-link-key="lineOfficial" target="_blank" rel="noopener">LINE公式を開く</a>
+          <a class="button secondary wide" href="consultation.html">無料相談も見る</a>
+        </aside>
       </section>
 
       <section class="section sequence-card" id="lineFlow">
         <p class="eyebrow">Step Messages</p>
-        <h2>LINE登録後のステップ配信</h2>
+        <h2>LINE登録後の配信内容</h2>
         <ol>
-          <li><b>登録直後</b><span>診断結果保存リンクと、見直しトップ3チェックリストを送付。</span></li>
-          <li><b>翌日</b><span>スマホ代・通信費の見直し手順を案内。</span></li>
-          <li><b>3日後</b><span>保険料と光熱費の確認ポイントを案内。</span></li>
-          <li><b>7日後</b><span>無料相談または詳細PDFレポートを自然に案内。</span></li>
+          <li><b>登録直後</b><span>診断結果の見返し方と、トップ3の確認ポイントを案内します。</span></li>
+          <li><b>翌日</b><span>スマホ代・通信費の見直し手順を案内します。</span></li>
+          <li><b>3日後</b><span>保険料と光熱費の確認ポイントを案内します。</span></li>
+          <li><b>7日後</b><span>無料相談または詳細PDFレポートを案内します。</span></li>
         </ol>
-      </section>
-
-      <section class="final-cta">
-        <p class="eyebrow">Keep Result</p>
-        <h2>家族と共有したい人は、LINE保存が一番スムーズです。</h2>
-        <a class="button primary" href="https://lin.ee/tV1kkvT" data-link-key="lineOfficial" target="_blank" rel="noopener">LINEで保存する</a>
       </section>
     </main>
 
@@ -64,6 +87,7 @@
     </footer>
     <script src="site-config.js"></script>
     <script src="link-config.js"></script>
+    <script src="line-save.js"></script>
     <script src="tracking.js"></script>
   </body>
 </html>
