@@ -4,6 +4,9 @@ const linkMap = {
   insuranceAffiliate: () => window.SiteConfig?.affiliate?.insurance,
   energyAffiliate: () => window.SiteConfig?.affiliate?.energy,
   internetAffiliate: () => window.SiteConfig?.affiliate?.internet,
+  budgetAffiliate: () => window.SiteConfig?.affiliate?.budget,
+  creditCardAffiliate: () => window.SiteConfig?.affiliate?.creditCard,
+  securitiesAffiliate: () => window.SiteConfig?.affiliate?.securities,
   consultationForm: () => window.SiteConfig?.forms?.consultation,
 };
 

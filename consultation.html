@@ -3,12 +3,12 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>固定費見直しナビ｜固定費削減診断</title>
+    <title>固定費見直しナビ｜相談なしで進めるセルフチェック</title>
     <meta
       name="description"
-      content="診断結果をもとに、スマホ代・保険料・光熱費・サブスクなどを自分で見直す順番を確認できます。個別返信なしで使える固定費見直しナビです。"
+      content="固定費削減診断の結果をもとに、スマホ代、保険、光熱費、ネット回線、家計管理の見直し順を自分で確認できるナビページです。"
     />
-    <link rel="canonical" href="https://fixed-cost-checker.vercel.app/consultation" />
+    <link rel="canonical" href="https://fixed-cost-checker.vercel.app/consultation.html" />
     <link rel="stylesheet" href="styles.css" />
   </head>
   <body>
@@ -17,9 +17,9 @@
         <span class="brand-mark">¥</span>
         <span>固定費削減診断</span>
       </a>
-      <nav aria-label="主要ナビゲーション">
+      <nav aria-label="主なナビゲーション">
         <a href="index.html#diagnosis">診断に戻る</a>
-        <a href="recommended-services.html">見直しサービス</a>
+        <a href="recommended-services.html">おすすめサービス</a>
         <a href="line.html">LINE保存</a>
       </nav>
       <a class="header-cta" href="#selfCheck">見直し順を見る</a>
@@ -28,56 +28,71 @@
     <main class="conversion-page">
       <section class="conversion-hero">
         <p class="eyebrow">Self Check Navigation</p>
-        <h1>相談なしで進める、固定費の見直し順。</h1>
+        <h1>診断結果をもとに、見直す順番を自分で確認できます。</h1>
         <p class="lead">
-          このページは個別相談の受付ではありません。診断結果をもとに、どの固定費から自分で確認すればよいかを整理するためのナビです。
+          このページは個別相談の受付ではありません。診断結果で気になった項目から、比較ページやチェックリストへ進めるセルフナビです。必要な支出を守りながら、まずは長く続く固定費から整理しましょう。
         </p>
         <div class="hero-actions">
-          <a class="button primary" href="recommended-services.html">おすすめの見直し先を見る</a>
-          <a class="button secondary" href="line.html">診断結果を保存する</a>
+          <a class="button primary" href="recommended-services.html">おすすめサービスを見る</a>
+          <a class="button secondary" href="line.html">診断結果をLINEに保存</a>
         </div>
       </section>
 
       <section class="conversion-layout" id="selfCheck">
         <div class="result-card">
           <p class="eyebrow">Priority</p>
-          <h2>まず見る順番</h2>
+          <h2>まず確認する5つの順番</h2>
           <ul class="reason-list">
             <li>
-              <b>1. 使っていないサブスク</b>
-              <span>ほぼ使っていない、契約を忘れていたものは最初に確認します。解約だけで完了することが多く、手間が少なめです。</span>
+              <b>1. スマホ代・子どものスマホ代</b>
+              <span>月8,000円以上、または家族全体で通信費が重い場合は最初に確認。プラン変更だけで完了しやすく、心理的なハードルが低い項目です。</span>
             </li>
             <li>
-              <b>2. スマホ代</b>
-              <span>月8,000円以上なら、プラン変更や不要オプションの確認余地があります。端末代の残りも確認してください。</span>
+              <b>2. 保険料・子どもの保険</b>
+              <span>削る前提ではなく、保障内容の重複や家族構成に合っているかを整理します。長期で続く固定費なので、見直し効果が大きくなりやすい項目です。</span>
             </li>
             <li>
-              <b>3. インターネット・光熱費</b>
-              <span>契約先、セット割、更新月、不要オプションを確認します。比較先を見るだけでも相場感がつかめます。</span>
+              <b>3. 電気・ガス</b>
+              <span>電気・ガス・水道の合計が高い場合に確認。使い方を我慢する前に、契約プランや切り替え先を見比べるのが現実的です。</span>
             </li>
             <li>
-              <b>4. 保険料</b>
-              <span>保障内容の判断が必要なため、断定せずに契約内容を確認します。必要なら専門サービスの比較先を見てください。</span>
+              <b>4. インターネット回線</b>
+              <span>ネット代が月6,000円以上なら、スマホとのセット割、不要オプション、更新月を確認。家族世帯は通信費全体で見ると判断しやすくなります。</span>
+            </li>
+            <li>
+              <b>5. 家計管理・カード・証券口座</b>
+              <span>すぐに切り替えない人向け。支出を見える化し、浮いたお金を貯金や将来資金に回すための受け皿として案内します。</span>
             </li>
           </ul>
         </div>
 
         <aside class="conversion-side">
           <div class="result-card">
-            <h2>手動返信なしの使い方</h2>
+            <h2>手を動かさずに回すための使い方</h2>
             <p>
-              LINEでは自動配信で見直し手順を送ります。個別相談は受けず、ユーザー自身が比較ページやチェックリストを見て進める設計です。
+              診断結果、LINE保存、見直しナビ、おすすめサービスの順で自動的に流れる設計です。ユーザーが自分で比較ページへ進めるため、個別返信を前提にしない運用にしています。
             </p>
           </div>
-          <a class="button primary wide" href="recommended-services.html">項目別の見直し先を見る</a>
-          <a class="button secondary wide" href="paid-report.html">PDFレポートを見る</a>
+          <a class="button primary wide" href="recommended-services.html">5カテゴリの比較導線を見る</a>
+          <a class="button secondary wide" href="paid-report.html">PDFレポート導線を見る</a>
         </aside>
+      </section>
+
+      <section class="section compact-section">
+        <p class="eyebrow">Family Friendly</p>
+        <h2>子育て世帯は、教育費を守る順番で確認</h2>
+        <div class="mini-grid">
+          <div><b>通信費</b><span>家族全体のスマホ代と子どものスマホ代を分けて確認</span></div>
+          <div><b>保険</b><span>安心を残しながら、保障内容と重複を整理</span></div>
+          <div><b>サブスク</b><span>知育アプリや動画サービスは利用頻度で確認</span></div>
+          <div><b>教育費</b><span>塾代・習い事・積立は削るのではなく優先順位を整理</span></div>
+        </div>
       </section>
     </main>
 
     <footer class="site-footer">
       <p>
-        本ページは一般的な確認順を示すものです。保険・通信・電力等の契約判断は、各サービスの条件を確認のうえご自身の責任で行ってください。
+        本ページは一般的な確認手順を示すものです。保険・通信・電力等の契約判断は、各サービスの条件を確認のうえご自身の責任で行ってください。
       </p>
       <small>© 固定費削減診断</small>
     </footer>

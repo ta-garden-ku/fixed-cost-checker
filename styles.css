@@ -1008,6 +1008,55 @@ th {
   line-height: 1.72;
 }
 
+.service-points,
+.setup-list {
+  display: grid;
+  gap: 8px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.service-points li,
+.setup-list div {
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  padding: 10px 12px;
+  background: #f8fafc;
+  color: var(--muted);
+  font-size: 0.9rem;
+  line-height: 1.55;
+}
+
+.setup-list div {
+  display: grid;
+  gap: 4px;
+}
+
+.setup-list b {
+  color: var(--ink);
+}
+
+.setup-list span {
+  color: var(--muted);
+}
+
+.button-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  align-items: center;
+}
+
+.featured-card {
+  grid-column: span 2;
+}
+
+.compact-section {
+  padding-top: 34px;
+  padding-bottom: 26px;
+}
+
 .price-box {
   display: inline-grid;
   gap: 6px;
@@ -1061,6 +1110,10 @@ th {
   .conversion-box {
     grid-template-columns: 1fr;
   }
+
+  .featured-card {
+    grid-column: span 2;
+  }
 }
 
 @media (max-width: 640px) {
@@ -1103,6 +1156,14 @@ th {
   .cta-grid,
   .subscription-row {
     grid-template-columns: 1fr;
+  }
+
+  .featured-card {
+    grid-column: span 1;
+  }
+
+  .button-row .button {
+    width: 100%;
   }
 
   .step-tab {
