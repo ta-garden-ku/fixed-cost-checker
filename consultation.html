@@ -3,11 +3,12 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>無料相談｜固定費削減診断</title>
+    <title>固定費見直しナビ｜固定費削減診断</title>
     <meta
       name="description"
-      content="診断結果をもとに、スマホ代・保険・光熱費・サブスクなどの見直し候補を無料で相談できます。"
+      content="診断結果をもとに、スマホ代・保険料・光熱費・サブスクなどを自分で見直す順番を確認できます。個別返信なしで使える固定費見直しナビです。"
     />
+    <link rel="canonical" href="https://fixed-cost-checker.vercel.app/consultation" />
     <link rel="stylesheet" href="styles.css" />
   </head>
   <body>
@@ -18,93 +19,71 @@
       </a>
       <nav aria-label="主要ナビゲーション">
         <a href="index.html#diagnosis">診断に戻る</a>
-        <a href="recommended-services.html">おすすめサービス</a>
+        <a href="recommended-services.html">見直しサービス</a>
         <a href="line.html">LINE保存</a>
       </nav>
-      <a class="header-cta" href="#consultForm">無料相談へ</a>
+      <a class="header-cta" href="#selfCheck">見直し順を見る</a>
     </header>
 
     <main class="conversion-page">
       <section class="conversion-hero">
-        <p class="eyebrow">Free Consultation</p>
-        <h1>削減できそうな固定費を、診断結果をもとに無料で相談。</h1>
+        <p class="eyebrow">Self Check Navigation</p>
+        <h1>相談なしで進める、固定費の見直し順。</h1>
         <p class="lead">
-          スマホ代、保険、光熱費、通信費、サブスク。どこから見直すべきか迷ったら、診断結果を見ながら整理できます。
+          このページは個別相談の受付ではありません。診断結果をもとに、どの固定費から自分で確認すればよいかを整理するためのナビです。
         </p>
-        <ul class="trust-list">
-          <li>相談は無料</li>
-          <li>無理な勧誘なし</li>
-          <li>名前・連絡先は相談時だけ</li>
-        </ul>
+        <div class="hero-actions">
+          <a class="button primary" href="recommended-services.html">おすすめの見直し先を見る</a>
+          <a class="button secondary" href="line.html">診断結果を保存する</a>
+        </div>
       </section>
 
-      <section class="conversion-layout">
-        <form class="lead-form" id="consultForm">
-          <div class="form-head">
-            <span>Request</span>
-            <h2>相談内容を送る</h2>
-            <p>今は仮フォームです。本番ではGoogleフォーム、HubSpot、LINEフォームなどに差し替えます。</p>
-          </div>
-          <label class="field">
-            <span>相談したい項目</span>
-            <select required>
-              <option>スマホ代・通信費</option>
-              <option>保険料</option>
-              <option>光熱費</option>
-              <option>サブスク</option>
-              <option>家計全体</option>
-            </select>
-          </label>
-          <label class="field">
-            <span>月に削減できそうな金額</span>
-            <input type="number" min="0" step="1000" placeholder="例：8000" />
-          </label>
-          <label class="field">
-            <span>メールアドレス</span>
-            <input type="email" required placeholder="sample@example.com" />
-          </label>
-          <label class="field">
-            <span>相談メモ</span>
-            <textarea placeholder="診断結果で気になった項目を書いてください"></textarea>
-          </label>
-          <a
-            class="button primary"
-            href="https://docs.google.com/forms/d/e/1FAIpQLSev7W1T8XUt8lvVsOD1yNvlRXh9m7Dfd0IDW5fAIQLs8jvt_Q/viewform?usp=publish-editor"
-            data-link-key="consultationForm"
-            target="_blank"
-            rel="noopener"
-          >Googleフォームで無料相談を申し込む</a>
-          <p class="form-message" aria-live="polite"></p>
-          <p class="notice">本フォームはMVP用の仮受付です。送信内容は外部には保存されません。</p>
-          <p class="notice">
-            送信後は、Googleフォームの完了画面に表示される「次のステップ」リンクから診断結果の保存ページへ進めます。
-          </p>
-        </form>
+      <section class="conversion-layout" id="selfCheck">
+        <div class="result-card">
+          <p class="eyebrow">Priority</p>
+          <h2>まず見る順番</h2>
+          <ul class="reason-list">
+            <li>
+              <b>1. 使っていないサブスク</b>
+              <span>ほぼ使っていない、契約を忘れていたものは最初に確認します。解約だけで完了することが多く、手間が少なめです。</span>
+            </li>
+            <li>
+              <b>2. スマホ代</b>
+              <span>月8,000円以上なら、プラン変更や不要オプションの確認余地があります。端末代の残りも確認してください。</span>
+            </li>
+            <li>
+              <b>3. インターネット・光熱費</b>
+              <span>契約先、セット割、更新月、不要オプションを確認します。比較先を見るだけでも相場感がつかめます。</span>
+            </li>
+            <li>
+              <b>4. 保険料</b>
+              <span>保障内容の判断が必要なため、断定せずに契約内容を確認します。必要なら専門サービスの比較先を見てください。</span>
+            </li>
+          </ul>
+        </div>
 
         <aside class="conversion-side">
           <div class="result-card">
-            <h2>相談で整理すること</h2>
-            <ul class="reason-list">
-              <li><b>優先順位</b><span>スマホ、保険、光熱費、サブスクのどこから始めるかを整理します。</span></li>
-              <li><b>削減余地</b><span>診断結果の金額をもとに、無理なく見直せる項目を確認します。</span></li>
-              <li><b>次の行動</b><span>比較、解約、乗り換え、保留の判断をしやすくします。</span></li>
-            </ul>
+            <h2>手動返信なしの使い方</h2>
+            <p>
+              LINEでは自動配信で見直し手順を送ります。個別相談は受けず、ユーザー自身が比較ページやチェックリストを見て進める設計です。
+            </p>
           </div>
-          <a class="button secondary wide" href="line.html">LINEで結果を保存してから相談する</a>
+          <a class="button primary wide" href="recommended-services.html">項目別の見直し先を見る</a>
+          <a class="button secondary wide" href="paid-report.html">PDFレポートを見る</a>
         </aside>
       </section>
     </main>
 
     <footer class="site-footer">
       <p>
-        本診断は入力内容にもとづく概算シミュレーションです。実際の削減額や契約条件は各サービス・契約内容によって異なります。
+        本ページは一般的な確認順を示すものです。保険・通信・電力等の契約判断は、各サービスの条件を確認のうえご自身の責任で行ってください。
       </p>
       <small>© 固定費削減診断</small>
     </footer>
     <script src="site-config.js"></script>
     <script src="analytics.js"></script>
     <script src="link-config.js"></script>
-    <script src="lead.js"></script>
     <script src="tracking.js"></script>
   </body>
 </html>

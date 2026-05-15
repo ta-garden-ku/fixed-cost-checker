@@ -25,8 +25,8 @@
 
 1. 公開URLをコピー
 2. `index.html` の canonical を公開URLに変更
-3. GoogleフォームやLINEのメッセージ内に公開URLを入れる
-4. スマホで診断からLINE登録、相談フォームまでテスト
+3. LINEのメッセージ内に公開URLを入れる
+4. スマホで診断からLINE登録、見直しナビまでテスト
 
 ## 将来Next.js化する場合
 

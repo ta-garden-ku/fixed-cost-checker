@@ -1,20 +1,11 @@
-# LINE公式アカウント 本番化メモ
+# LINE公式アカウント 運用メモ
 
-## まず作るもの
-
-1. LINE公式アカウントを作成
-2. アカウント名を設定: `固定費削減診断`
-3. プロフィール説明を設定
-4. あいさつメッセージを設定
-5. リッチメニューを設定
-6. 友だち追加URLを取得
-7. `site-config.js` の `lineOfficialUrl` にURLを貼り付ける
-
-公式情報では、LINE公式アカウントは友だち追加したユーザーへのメッセージ配信、チャット、リッチメニュー、レポートなどが使えます。未認証アカウントでも個人・法人どちらでも利用でき、基本機能は認証済みアカウントと同じです。
+目的は、手動返信なしで固定費見直しの手順を届けることです。
+個別相談は受けず、診断サイト、LINE保存、見直しナビ、おすすめサービス、PDFレポートへ誘導します。
 
 ## プロフィール文
 
-固定費削減診断の結果を保存し、スマホ代・保険・光熱費・サブスクの見直し手順をお届けします。
+固定費削減診断の結果を保存し、スマホ代・保険・光熱費・サブスクの見直し手順を自動でお届けします。
 
 ## あいさつメッセージ
 
@@ -22,7 +13,7 @@
 
 固定費って、毎月なんとなく払っているうちに、思った以上に大きくなりがちです。
 
-このLINEでは、診断結果をあとから見返しながら、スマホ代・保険・光熱費・サブスクを少しずつ整理できるようにサポートします。
+このLINEでは、診断結果をあとから見返しながら、スマホ代・保険・光熱費・サブスクを少しずつ整理できるように、見直しのヒントを自動でお届けします。
 
 まずは、無理に全部見直そうとしなくて大丈夫です。
 診断結果の中から、次の3つだけ見てみてください。
@@ -31,9 +22,29 @@
 2. 使っていないサブスク
 3. スマホ代・保険料・光熱費のどれが一番重いか
 
-「どこから始めればいいかわからない」と感じたら、診断結果をもとに無料相談もできます。
+個別返信は行っていませんが、見直しナビから自分で確認できます。
 
-焦らず、できるところから一緒に整理していきましょう。
+▼見直しナビ
+https://fixed-cost-checker.vercel.app/consultation
+
+## 応答メッセージ
+
+メッセージありがとうございます。
+
+このアカウントは、診断結果の保存と固定費見直しのヒントを自動でお届けするアカウントです。
+
+現在、個別返信は行っていません。
+
+見直しを進めたい場合は、以下から確認してください。
+
+▼診断サイト
+https://fixed-cost-checker.vercel.app/
+
+▼見直しナビ
+https://fixed-cost-checker.vercel.app/consultation
+
+▼おすすめ見直しサービス
+https://fixed-cost-checker.vercel.app/recommended-services
 
 ## ステップ配信
 
@@ -48,10 +59,8 @@
 まずは診断結果のトップ3だけ確認しましょう。
 
 CTA:
-無料相談を見る
-
-無料相談フォーム:
-https://docs.google.com/forms/d/e/1FAIpQLSev7W1T8XUt8lvVsOD1yNvlRXh9m7Dfd0IDW5fAIQLs8jvt_Q/viewform?usp=publish-editor
+見直しナビを見る
+https://fixed-cost-checker.vercel.app/consultation
 
 ### 翌日
 
@@ -62,7 +71,8 @@ https://docs.google.com/forms/d/e/1FAIpQLSev7W1T8XUt8lvVsOD1yNvlRXh9m7Dfd0IDW5fA
 家族回線、端末代、不要オプションもあわせて確認しましょう。
 
 CTA:
-スマホプランを比較する
+おすすめ見直しサービスを見る
+https://fixed-cost-checker.vercel.app/recommended-services
 
 ### 3日後
 
@@ -73,7 +83,8 @@ CTA:
 一度見直すだけで長く効果が続きやすいので、診断結果で金額が大きかった人は優先して確認しましょう。
 
 CTA:
-おすすめサービスを見る
+見直しナビを見る
+https://fixed-cost-checker.vercel.app/consultation
 
 ### 7日後
 
@@ -85,41 +96,17 @@ CTA:
 
 CTA:
 詳細PDFレポートを見る
+https://fixed-cost-checker.vercel.app/paid-report
 
 ## リッチメニュー案
 
 - 診断する: `https://fixed-cost-checker.vercel.app/#diagnosis`
 - 結果を保存: `https://fixed-cost-checker.vercel.app/line`
-- 無料相談: `https://fixed-cost-checker.vercel.app/consultation`
-- 相談後の次のステップ: `https://fixed-cost-checker.vercel.app/thanks`
+- 見直しナビ: `https://fixed-cost-checker.vercel.app/consultation`
 - おすすめサービス: `https://fixed-cost-checker.vercel.app/recommended-services`
 - PDFレポート: `https://fixed-cost-checker.vercel.app/paid-report`
 
-## Googleフォーム送信後メッセージ
+## 重要
 
-Googleフォームの `設定` → `プレゼンテーション` → `確認メッセージ` に以下を入れます。
-
-```text
-送信ありがとうございます。
-
-回答内容を確認し、必要に応じてご連絡します。
-
-このまま終わると診断結果を忘れやすいので、次のページで「LINE保存」または「見直しサービス」を確認しておくのがおすすめです。
-
-▼送信後の次のステップ
-https://fixed-cost-checker.vercel.app/thanks
-```
-
-## site-config.js の差し替え場所
-
-```js
-window.SiteConfig = {
-  lineOfficialUrl: "https://lin.ee/tV1kkvT",
-  affiliate: {
-    sim: "スマホ案件URL",
-    insurance: "保険案件URL",
-    energy: "電気ガス案件URL",
-    internet: "ネット回線案件URL",
-  },
-};
-```
+Googleフォームによる無料相談受付は、手動返信が必要になるため停止します。
+再開する場合は、外注先や提携先に対応を渡せる状態になってからにします。

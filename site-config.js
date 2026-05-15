@@ -8,7 +8,7 @@ window.SiteConfig = {
     internet: "https://example.com/affiliate/internet",
   },
   forms: {
-    consultation: "https://docs.google.com/forms/d/e/1FAIpQLSev7W1T8XUt8lvVsOD1yNvlRXh9m7Dfd0IDW5fAIQLs8jvt_Q/viewform?usp=publish-editor",
+    consultation: "",
     paidReport: "",
   },
 };
