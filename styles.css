@@ -436,6 +436,12 @@ h4 {
   margin-bottom: 16px;
 }
 
+.nested-head {
+  margin-top: 18px;
+  padding-top: 18px;
+  border-top: 1px solid var(--line);
+}
+
 .form-head span {
   color: var(--green);
   font-weight: 900;
@@ -487,6 +493,70 @@ h4 {
 .field.error input {
   border-color: var(--red);
   background: #fff7f7;
+}
+
+.family-fields,
+.family-results {
+  display: none;
+}
+
+.family-fields.active,
+.family-results.active {
+  display: block;
+}
+
+.check-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 10px;
+  margin-top: 12px;
+}
+
+.check-row {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  min-height: 44px;
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  background: #f8fafc;
+  padding: 10px 12px;
+  color: #344157;
+  font-weight: 800;
+}
+
+.check-row input {
+  width: 17px;
+  height: 17px;
+  accent-color: var(--green);
+}
+
+.family-band {
+  border-top: 1px solid var(--line);
+  border-bottom: 1px solid var(--line);
+}
+
+.family-results {
+  margin: 14px 0;
+}
+
+.family-results .result-grid,
+.family-results .result-columns {
+  margin-top: 12px;
+}
+
+.age-comment-list {
+  display: grid;
+  gap: 10px;
+}
+
+.age-comment-list p {
+  margin: 0;
+  border-radius: 8px;
+  background: #f8fafc;
+  padding: 12px;
+  color: var(--muted);
+  line-height: 1.75;
 }
 
 .preset-row {
@@ -1024,6 +1094,7 @@ th {
   .waste-grid,
   .monetize-grid,
   .service-list,
+  .check-grid,
   .stepper,
   .input-grid,
   .input-grid.dense,

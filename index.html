@@ -3,16 +3,16 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>固定費削減診断｜サブスク・スマホ代・保険の年間ムダ支出をチェック</title>
+    <title>固定費削減診断｜サブスク・スマホ代・保険・子育て固定費をチェック</title>
     <meta
       name="description"
-      content="スマホ代、保険、光熱費、サブスクなどの固定費を無料診断。毎月の支出から年間コストと削減可能性を見える化します。"
+      content="スマホ代、保険、光熱費、サブスク、子育て固定費を無料診断。教育費や習い事を守りながら、年間コストと見直し候補を見える化します。"
     />
     <meta property="og:type" content="website" />
-    <meta property="og:title" content="固定費削減診断｜年間ムダ支出を無料チェック" />
+    <meta property="og:title" content="固定費削減診断｜子育て固定費もまとめて無料チェック" />
     <meta
       property="og:description"
-      content="毎月なんとなく払っている固定費とサブスクを入力するだけ。年間・10年コストと見直し優先度を可視化します。"
+      content="スマホ代・保険・サブスク・教育費・習い事まで、毎月の固定費をまとめて見える化します。"
     />
     <meta property="og:image" content="https://fixed-cost-checker.vercel.app/ogp-fixed-cost-checker.png" />
     <meta property="og:locale" content="ja_JP" />
@@ -85,10 +85,10 @@
     <main id="top">
       <section class="hero-section">
         <div class="hero-copy">
-          <p class="eyebrow">固定費 削減・サブスク 年間コスト診断</p>
+          <p class="eyebrow">固定費 削減・サブスク・子育て固定費診断</p>
           <h1>あなたの固定費、年間いくらムダになっているか知っていますか？</h1>
           <p class="lead">
-            スマホ代、保険、サブスク、光熱費。毎月なんとなく払っている支出を診断して、削減できる可能性を見える化します。
+            スマホ代、保険、サブスク、光熱費、子育て固定費。毎月なんとなく払っている支出を診断して、家族に必要なお金を守りながら見直せる可能性を見える化します。
           </p>
           <div class="hero-actions">
             <a class="button primary" href="#diagnosis">無料で診断する</a>
@@ -191,6 +191,33 @@
         </div>
       </section>
 
+      <section class="section family-band">
+        <div class="section-heading">
+          <p class="eyebrow">For Family</p>
+          <h2>子育て世帯の固定費も見える化</h2>
+          <p>
+            教育費、習い事、通信教育、子どものスマホ代、知育アプリなど、子育て世帯の固定費は少しずつ増えがちです。大切な支出を守るためにも、まずは家計全体を見える化しましょう。
+          </p>
+        </div>
+        <div class="waste-grid">
+          <article>
+            <span>教育費</span>
+            <b>削るのではなく、守るために整理</b>
+            <p>塾代や教育資金積立は大切な支出として扱い、他の固定費に見直し余地がないかを確認します。</p>
+          </article>
+          <article>
+            <span>習い事</span>
+            <b>続けたいものを選びやすく</b>
+            <p>子どもが本当に続けたいものと、利用頻度が低いものを分けて考えられます。</p>
+          </article>
+          <article>
+            <span>通信費</span>
+            <b>子どものスマホ代も確認</b>
+            <p>家族全体のスマホ代や子ども向けアプリを見える化し、納得して選び直せます。</p>
+          </article>
+        </div>
+      </section>
+
       <section class="diagnosis-section" id="diagnosis">
         <div class="section-heading compact">
           <p class="eyebrow">Free Check</p>
@@ -239,6 +266,46 @@
                 <input id="savings" type="number" min="0" step="1000" inputmode="numeric" value="20000" />
               </label>
             </div>
+            <div class="family-fields" id="familyFields">
+              <div class="form-head nested-head">
+                <span>Family</span>
+                <h3>子育て世帯の情報</h3>
+                <p>家族に必要な支出を守りながら、見直せる固定費を整理します。</p>
+              </div>
+              <div class="input-grid">
+                <label class="field">
+                  <span>子どもの人数</span>
+                  <input id="childrenCount" type="number" min="0" max="8" step="1" value="1" />
+                </label>
+                <label class="field">
+                  <span>オンライン学習の利用頻度</span>
+                  <select id="onlineLearningUsage">
+                    <option value="weekly">週に数回以上</option>
+                    <option value="monthly">月に数回</option>
+                    <option value="rarely">ほぼ使っていない</option>
+                  </select>
+                </label>
+              </div>
+              <div class="check-grid" aria-label="子どもの年齢層">
+                <label class="check-row"><input id="agePreschool" name="childAgeGroups" value="preschool" type="checkbox" />未就学児</label>
+                <label class="check-row"><input id="ageElementary" name="childAgeGroups" value="elementary" type="checkbox" checked />小学生</label>
+                <label class="check-row"><input id="ageJunior" name="childAgeGroups" value="junior" type="checkbox" />中学生</label>
+                <label class="check-row"><input id="ageHigh" name="childAgeGroups" value="high" type="checkbox" />高校生</label>
+                <label class="check-row"><input id="ageUniversity" name="childAgeGroups" value="university" type="checkbox" />大学生</label>
+                <label class="check-row"><input id="ageMultiple" name="childAgeGroups" value="multiple" type="checkbox" />複数該当</label>
+              </div>
+              <div class="check-grid" aria-label="今後不安な支出">
+                <label class="check-row"><input id="concernEducation" name="familyConcerns" value="education" type="checkbox" checked />教育費</label>
+                <label class="check-row"><input id="concernLessons" name="familyConcerns" value="lessons" type="checkbox" />習い事</label>
+                <label class="check-row"><input id="concernMobile" name="familyConcerns" value="mobile" type="checkbox" />スマホ代</label>
+                <label class="check-row"><input id="concernInsurance" name="familyConcerns" value="insurance" type="checkbox" />保険</label>
+                <label class="check-row"><input id="concernFood" name="familyConcerns" value="food" type="checkbox" />食費</label>
+                <label class="check-row"><input id="concernHousing" name="familyConcerns" value="housing" type="checkbox" />住宅費</label>
+                <label class="check-row"><input id="concernCar" name="familyConcerns" value="car" type="checkbox" />車関連費</label>
+                <label class="check-row"><input id="concernRetirement" name="familyConcerns" value="retirement" type="checkbox" />老後資金</label>
+                <label class="check-row"><input id="concernUnknown" name="familyConcerns" value="unknown" type="checkbox" />特にわからない</label>
+              </div>
+            </div>
           </section>
 
           <section class="form-step" data-step="2" aria-labelledby="step2Title">
@@ -262,6 +329,29 @@
               <label class="field"><span>学習系サブスク</span><input id="learningSub" type="number" min="0" step="100" value="0" /></label>
               <label class="field"><span>クラウド・アプリ</span><input id="cloudSub" type="number" min="0" step="100" value="680" /></label>
               <label class="field full"><span>その他固定費</span><input id="otherFixed" type="number" min="0" step="100" value="5000" /></label>
+            </div>
+            <div class="family-fields" id="familyCostFields">
+              <div class="form-head nested-head">
+                <span>Family Cost</span>
+                <h3>子育て関連の毎月固定費</h3>
+                <p>教育費や積立は大切な支出として扱い、削るのではなく優先順位を整理します。</p>
+              </div>
+              <div class="input-grid dense">
+                <label class="field"><span>保育園・幼稚園関連費</span><input id="preschoolCost" type="number" min="0" step="100" value="0" /></label>
+                <label class="field"><span>学童・放課後サービス</span><input id="afterSchoolCost" type="number" min="0" step="100" value="0" /></label>
+                <label class="field"><span>学校関連費</span><input id="schoolCost" type="number" min="0" step="100" value="5000" /></label>
+                <label class="field"><span>塾代</span><input id="cramSchoolCost" type="number" min="0" step="100" value="0" /></label>
+                <label class="field"><span>習い事</span><input id="lessonsCost" type="number" min="0" step="100" value="12000" /></label>
+                <label class="field"><span>オンライン学習サービス</span><input id="onlineLearningCost" type="number" min="0" step="100" value="0" /></label>
+                <label class="field"><span>子ども向け動画・知育アプリ</span><input id="childAppCost" type="number" min="0" step="100" value="980" /></label>
+                <label class="field"><span>子どものスマホ代</span><input id="childMobileCost" type="number" min="0" step="100" value="0" /></label>
+                <label class="field"><span>子どもの保険</span><input id="childInsuranceCost" type="number" min="0" step="100" value="0" /></label>
+                <label class="field"><span>教育資金積立</span><input id="educationSavingsCost" type="number" min="0" step="100" value="10000" /></label>
+                <label class="field"><span>子ども用品の定期購入</span><input id="childSubscriptionCost" type="number" min="0" step="100" value="0" /></label>
+                <label class="field"><span>給食費</span><input id="schoolLunchCost" type="number" min="0" step="100" value="4500" /></label>
+                <label class="field"><span>送迎・交通費</span><input id="transportCost" type="number" min="0" step="100" value="0" /></label>
+                <label class="field full"><span>その他子育て固定費</span><input id="otherChildcareCost" type="number" min="0" step="100" value="0" /></label>
+              </div>
             </div>
           </section>
 
@@ -305,13 +395,36 @@
               <div class="metric-card"><span>貯蓄余力スコア</span><strong id="savingScore">0</strong></div>
             </div>
 
+            <section class="family-results" id="familyResults">
+              <div class="result-grid">
+                <div class="metric-card emphasis"><span>月額子育て固定費</span><strong id="childcareMonthly">0円</strong></div>
+                <div class="metric-card"><span>年間子育て固定費</span><strong id="childcareYearly">0円</strong></div>
+                <div class="metric-card"><span>手取りに占める割合</span><strong id="childcareRatio">0%</strong></div>
+              </div>
+              <div class="result-columns">
+                <section class="result-card">
+                  <h4>家族の安心を守る見直し候補</h4>
+                  <ol class="priority-list" id="childcarePriorityList"></ol>
+                </section>
+                <section class="result-card">
+                  <h4>教育費を守るための固定費改善</h4>
+                  <p id="educationProtectText"></p>
+                  <p class="notice" id="protectedSavingsText"></p>
+                </section>
+              </div>
+              <section class="result-card">
+                <h4>子どもの年齢に応じた家計ポイント</h4>
+                <div class="age-comment-list" id="childAgeComment"></div>
+              </section>
+            </section>
+
             <div class="conversion-box">
               <div>
                 <span>毎月 <b id="monthlyPhrase">0円</b> の削減は</span>
                 <strong>年間 <b id="yearlyPhrase">0円</b>、10年で <b id="tenYearPhrase">0円</b></strong>
               </div>
-              <a class="button primary" href="consultation.html">見直し順を自動で確認する</a>
-              <small>個別返信なし。診断結果をもとに自分で確認できます。</small>
+              <a class="button primary" id="mainResultCta" href="consultation.html">見直し順を自動で確認する</a>
+              <small id="mainResultMicrocopy">個別返信なし。診断結果をもとに自分で確認できます。</small>
             </div>
 
             <div class="result-columns">
@@ -358,12 +471,12 @@
 
             <section class="cta-grid">
               <a href="line.html">
-                <span>LINEで診断結果を保存する</span>
-                <b>あとで家族と見返せます</b>
+                <span id="lineCtaText">LINEで診断結果を保存する</span>
+                <b id="lineCtaSub">あとで家族と見返せます</b>
               </a>
               <a href="consultation.html">
-                <span>削減できそうな項目の見直し先を見る</span>
-                <b>スマホ・保険・光熱費の比較へ</b>
+                <span id="navCtaText">削減できそうな項目の見直し先を見る</span>
+                <b id="navCtaSub">スマホ・保険・光熱費の比較へ</b>
               </a>
               <a href="recommended-services.html">
                 <span>おすすめの見直しサービスを見る</span>
@@ -437,6 +550,22 @@
         <details>
           <summary>個別相談はありますか？</summary>
           <p>現時点では個別相談ではなく、診断結果をもとに自分で見直し先を確認できる導線にしています。</p>
+        </details>
+        <details>
+          <summary>子どもの教育費も削減対象になりますか？</summary>
+          <p>教育費や積立を無理に削るための診断ではありません。家族全体の固定費を見える化し、教育費を守るために見直せる支出を整理することが目的です。</p>
+        </details>
+        <details>
+          <summary>習い事や塾代も入力した方がいいですか？</summary>
+          <p>はい。毎月の家計バランスを確認するために入力できます。ただし、結果では単純な削減候補ではなく、優先順位を整理する項目として扱います。</p>
+        </details>
+        <details>
+          <summary>子どものスマホ代や知育アプリも診断できますか？</summary>
+          <p>はい。子どものスマホ代、知育アプリ、オンライン学習、動画サービスなども固定費として確認できます。</p>
+        </details>
+        <details>
+          <summary>子育て世帯でも使えますか？</summary>
+          <p>はい。家族構成や子どもの年齢に応じて、見直しやすい固定費を整理できます。</p>
         </details>
       </section>
 
