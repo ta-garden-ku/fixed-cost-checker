@@ -864,6 +864,16 @@ h4 {
   padding: 16px;
 }
 
+.next-action-card {
+  border-color: rgba(15, 118, 110, 0.24);
+  background: linear-gradient(135deg, #ffffff, #ecfdf5);
+  margin: 14px 0;
+}
+
+.next-action-card p {
+  max-width: 760px;
+}
+
 .priority-list,
 .reason-list,
 .sequence-card ol {
