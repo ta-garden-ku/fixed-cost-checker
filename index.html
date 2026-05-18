@@ -101,28 +101,75 @@
             <li>結果をもとに見直し先を確認</li>
           </ul>
         </div>
-        <aside class="hero-dashboard" aria-label="診断結果のイメージ">
-          <div class="mini-result">
-            <span>削減可能性</span>
-            <strong>年間 126,000円</strong>
+        <aside class="hero-visual" aria-label="固定費診断の流れ">
+          <div class="warm-illustration" aria-hidden="true">
+            <svg viewBox="0 0 420 300" role="img">
+              <defs>
+                <linearGradient id="homeGrad" x1="0" x2="1">
+                  <stop offset="0" stop-color="#d9f99d" />
+                  <stop offset="1" stop-color="#bfdbfe" />
+                </linearGradient>
+              </defs>
+              <rect x="26" y="38" width="368" height="220" rx="28" fill="#fff" />
+              <path d="M92 132 L210 58 L328 132 V238 H92 Z" fill="url(#homeGrad)" />
+              <path d="M73 137 L210 49 L347 137" fill="none" stroke="#0f766e" stroke-width="14" stroke-linecap="round" stroke-linejoin="round" />
+              <rect x="164" y="154" width="92" height="84" rx="16" fill="#fff7ed" stroke="#fdba74" stroke-width="6" />
+              <circle cx="128" cy="222" r="28" fill="#2563eb" opacity=".12" />
+              <circle cx="292" cy="222" r="28" fill="#0f766e" opacity=".14" />
+              <circle cx="128" cy="178" r="18" fill="#2563eb" />
+              <circle cx="292" cy="178" r="18" fill="#0f766e" />
+              <path d="M112 236 C116 210 140 210 144 236" fill="none" stroke="#2563eb" stroke-width="10" stroke-linecap="round" />
+              <path d="M276 236 C280 210 304 210 308 236" fill="none" stroke="#0f766e" stroke-width="10" stroke-linecap="round" />
+              <g fill="#f59e0b">
+                <circle cx="78" cy="72" r="13" />
+                <circle cx="342" cy="83" r="10" />
+                <circle cx="360" cy="206" r="14" />
+              </g>
+            </svg>
           </div>
-          <div class="mini-chart" aria-hidden="true">
-            <span style="height: 38%"></span>
-            <span style="height: 62%"></span>
-            <span style="height: 84%"></span>
-            <span style="height: 48%"></span>
+          <div class="pocket-card">
+            <span>見直せるかも</span>
+            <strong>年間 96,000円</strong>
+            <small>スマホ代・サブスク・光熱費をまとめて確認</small>
           </div>
-          <div class="mini-grid">
-            <div>
-              <span>10年で</span>
-              <b>126万円</b>
-            </div>
-            <div>
-              <span>危険度</span>
-              <b>72/100</b>
-            </div>
+          <div class="mini-flow">
+            <span>入力</span>
+            <i></i>
+            <span>整理</span>
+            <i></i>
+            <span>見直し先</span>
           </div>
         </aside>
+      </section>
+
+      <section class="section flow-section" aria-labelledby="flowTitle">
+        <div class="section-heading">
+          <p class="eyebrow">How It Works</p>
+          <h2 id="flowTitle">家計を責めずに、順番を整えるだけ</h2>
+          <p>節約をがんばる前に、毎月自動で出ていくお金を見える化します。必要な支出は守りながら、見直しやすいところから確認できます。</p>
+        </div>
+        <div class="flow-steps" aria-label="診断の流れ">
+          <article class="flow-card">
+            <span class="flow-number">01</span>
+            <div class="flow-icon">入力</div>
+            <h3>わかる範囲で入れる</h3>
+            <p>スマホ代、家賃、光熱費、サブスクをざっくり入力。子育て世帯は教育費や習い事も追加できます。</p>
+          </article>
+          <span class="flow-arrow" aria-hidden="true"></span>
+          <article class="flow-card">
+            <span class="flow-number">02</span>
+            <div class="flow-icon">整理</div>
+            <h3>年間コストで見る</h3>
+            <p>月額だけでは気づきにくい支出を、年間・5年・10年で表示。優先順位も自動で整理します。</p>
+          </article>
+          <span class="flow-arrow" aria-hidden="true"></span>
+          <article class="flow-card">
+            <span class="flow-number">03</span>
+            <div class="flow-icon">選ぶ</div>
+            <h3>必要なものを守る</h3>
+            <p>教育費や安心は残しながら、スマホ代・光熱費・使っていないサブスクから確認できます。</p>
+          </article>
+        </div>
       </section>
 
       <section class="section two-column">
