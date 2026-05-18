@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://fixed-cost-checker.vercel.app/sitemap.xml
