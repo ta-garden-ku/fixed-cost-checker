@@ -513,21 +513,21 @@ function renderNextAction(data, opportunities) {
     title = "スマホ代から見るのがよさそうです";
     body = "通信費は毎月続く固定費です。まずはスマホ代の記事で確認し、必要なら比較ページへ進みましょう。";
     buttons = [
-      { label: "スマホ代の記事を見る", href: "article-smartphone-cost.html", primary: true },
+      { label: "スマホ代の記事を見る", href: "article-smartphone-10000-yen.html", primary: true },
       { label: "スマホ見直し先を見る", href: "recommended-services.html" },
     ];
   } else if (/インターネット|ネット|Wi-Fi/.test(topLabels)) {
     title = "ネット回線の料金を確認しましょう";
     body = "ネット代はスマホとのセット割や不要オプションで変わることがあります。光回線と工事なしWi-Fiを分けて確認できます。";
     buttons = [
-      { label: "ネット回線を見る", href: "recommended-services.html", primary: true },
-      { label: "見直しナビを見る", href: "consultation.html" },
+      { label: "ネット回線の記事を見る", href: "article-internet-6000-yen.html", primary: true },
+      { label: "ネット見直し先を見る", href: "recommended-services.html" },
     ];
   } else if (/光熱費|電気|ガス/.test(topLabels)) {
     title = "電気・ガスの契約を確認しましょう";
     body = "使い方を我慢する前に、契約プランや切り替え先を確認すると、生活の負担を増やさず見直せる可能性があります。";
     buttons = [
-      { label: "光熱費の記事を見る", href: "article-utilities-cost.html", primary: true },
+      { label: "家族の光熱費の記事を見る", href: "article-family-electricity-cost.html", primary: true },
       { label: "電気・ガスを確認する", href: "recommended-services.html" },
     ];
   } else if (/保険/.test(topLabels)) {
@@ -541,14 +541,14 @@ function renderNextAction(data, opportunities) {
     title = "サブスクを年額で見直しましょう";
     body = "使っているものは残して大丈夫です。ほぼ使っていないものだけ、年額と10年コストで整理しましょう。";
     buttons = [
-      { label: "サブスク整理の記事を見る", href: "article-subscription-cancel.html", primary: true },
+      { label: "サブスク整理の記事を見る", href: "article-unused-subscription-cancel.html", primary: true },
       { label: "診断結果をLINEに保存", href: "line.html" },
     ];
   } else if (data.household === "family") {
     title = "教育費を守る順番で確認しましょう";
     body = "子育て世帯は、教育費や習い事を削る前に、家族全体のスマホ代・光熱費・サブスクを整えるのがおすすめです。";
     buttons = [
-      { label: "子育て固定費の記事を見る", href: "article-family-fixed-cost.html", primary: true },
+      { label: "子育て家計の記事を見る", href: "article-family-money-left.html", primary: true },
       { label: "おすすめサービスを見る", href: "recommended-services.html" },
     ];
   }
