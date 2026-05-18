@@ -8,6 +8,8 @@ const state = {
   subscriptions: [],
 };
 
+let lastTrackedResultSignature = "";
+
 const presetServices = [
   { name: "Amazon Prime", price: 600, frequency: "weekly" },
   { name: "Netflix", price: 1490, frequency: "weekly" },
@@ -498,6 +500,35 @@ function renderResults() {
   renderCtas(data);
   renderNextAction(data, opportunities);
   saveLatestResult(data, fixedMonthly, possibleMonthly, possibleYearly, scores, opportunities);
+  trackDiagnosisComplete(data, fixedMonthly, possibleMonthly, possibleYearly, scores, opportunities);
+}
+
+function trackDiagnosisComplete(data, fixedMonthly, possibleMonthly, possibleYearly, scores, opportunities) {
+  const signature = [
+    data.household,
+    Math.round(fixedMonthly),
+    Math.round(possibleMonthly),
+    Math.round(possibleYearly),
+    scores.danger,
+    opportunities.all.slice(0, 3).map((item) => item.label).join("|"),
+  ].join(":");
+
+  if (signature === lastTrackedResultSignature) return;
+  lastTrackedResultSignature = signature;
+
+  if (typeof window.trackFixedCostEvent === "function") {
+    window.trackFixedCostEvent("diagnosis_complete", {
+      event_category: "lead",
+      household: data.household,
+      fixed_monthly: Math.round(fixedMonthly),
+      possible_monthly: Math.round(possibleMonthly),
+      possible_yearly: Math.round(possibleYearly),
+      danger_score: scores.danger,
+      top_item_1: opportunities.all[0]?.label || "",
+      top_item_2: opportunities.all[1]?.label || "",
+      top_item_3: opportunities.all[2]?.label || "",
+    });
+  }
 }
 
 function renderNextAction(data, opportunities) {
