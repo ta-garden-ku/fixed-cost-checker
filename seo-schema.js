@@ -64,7 +64,7 @@
         name: "固定費削減診断",
       },
       datePublished: "2026-05-18",
-      dateModified: "2026-05-18",
+      dateModified: "2026-05-19",
     });
   }
 })();

@@ -42,6 +42,16 @@
 - `line_click`: LINEに進んだ数。
 - おすすめサービスページのクリックが少ない場合は、診断結果画面のCTA文言を強める。
 
+## 追加で増やした検索入口記事
+
+- `article-family-smartphone-saving.html`: 家族のスマホ代。
+- `article-electric-gas-switching.html`: 電気・ガス切り替え。
+- `article-home-wifi-vs-fiber.html`: 光回線と工事なしWi-Fi。
+- `article-fixed-cost-review-ranking.html`: 見直しやすい固定費ランキング。
+- `article-insurance-premium-high.html`: 保険料が高いときの確認。
+
+この5本は、おすすめサービスページへ自然に流すための入口です。記事単体で完結させず、診断またはサービス比較へ進む導線を入れています。
+
 ## 次に人間側で見るところ
 
 - Vercel反映後、主要ページが表示されるか確認。
