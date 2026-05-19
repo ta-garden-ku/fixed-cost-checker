@@ -171,6 +171,15 @@ function calculateOpportunities(data) {
   if (fixed.mobile >= 8000) {
     addOpportunity(items, "スマホ代", fixed.mobile * 0.3, "格安プランや家族割の確認で見直せる可能性があります。");
   }
+  if (fixed.housing >= 100000) {
+    items.push({
+      label: "家賃・住宅ローン",
+      monthly: 0,
+      yearly: 0,
+      reason: "住まいの支出は削る前提ではなく、住宅ローン・火災保険・通信費など周辺固定費も含めて確認したい項目です。",
+      type: "priority",
+    });
+  }
   if (fixed.internet >= 6000) {
     addOpportunity(items, "インターネット代", fixed.internet * 0.2, "回線プランやセット割の確認余地があります。");
   }
@@ -567,6 +576,13 @@ function renderNextAction(data, opportunities) {
     buttons = [
       { label: "保険の確認ポイントを見る", href: "recommended-services.html#insurance-check", primary: true },
       { label: "見直しナビを見る", href: "consultation.html" },
+    ];
+  } else if (/家賃|住宅ローン/.test(topLabels) || data.fixed.housing >= 100000) {
+    title = "住宅固定費も確認しておきましょう";
+    body = "住まいの支出は大きいので、住宅ローンや火災保険を含めて、長く続く固定費として一度整理しておくと安心です。";
+    buttons = [
+      { label: "住宅固定費の記事を見る", href: "article-housing-fixed-cost.html", primary: true },
+      { label: "住宅ローン・火災保険を見る", href: "recommended-services.html#housing-next" },
     ];
   } else if (/サブスク|Amazon|Netflix|U-NEXT|Spotify|YouTube|Kindle|Canva|Notion/.test(topLabels)) {
     title = "サブスクを年額で見直しましょう";

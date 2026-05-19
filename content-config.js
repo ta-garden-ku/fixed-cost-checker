@@ -64,6 +64,27 @@ window.FixedCostContent = {
       tags: ["family", "childcare"],
     },
     {
+      title: "家賃・住宅ローンが家計を圧迫しているときの見方",
+      category: "住宅固定費",
+      href: "article-housing-fixed-cost.html",
+      description: "住まいの安心を守りながら、固定費全体で重さを確認します。",
+      tags: ["housing", "mortgage", "family"],
+    },
+    {
+      title: "火災保険は更新前に比較した方がいい？確認ポイント",
+      category: "火災保険",
+      href: "article-fire-insurance-check.html",
+      description: "補償内容、保険期間、建物・家財、地震保険を確認します。",
+      tags: ["housing", "insurance"],
+    },
+    {
+      title: "住宅ローンの見直しはいつ考える？固定費として確認するポイント",
+      category: "住宅ローン",
+      href: "article-mortgage-review.html",
+      description: "金利、残期間、借入残高、借り換え費用を整理します。",
+      tags: ["housing", "mortgage"],
+    },
+    {
       title: "毎月お金が残らない人の固定費チェックリスト",
       category: "家計チェック",
       href: "article-money-left-checklist.html",
