@@ -43,6 +43,84 @@
         </span>
       </div>
 
+      <section class="section compact-section service-finder">
+        <p class="eyebrow">Start Here</p>
+        <h2>診断結果で気になった項目から選ぶ</h2>
+        <p>
+          すべてを一度に見直す必要はありません。診断結果で上位に出た項目から、ひとつずつ確認できるように並べています。
+        </p>
+        <div class="finder-grid">
+          <a href="#sim-service"><b>スマホ代が高い</b><span>格安SIM・スマホプランへ</span></a>
+          <a href="#energy-service"><b>光熱費が高い</b><span>電気・ガスの確認へ</span></a>
+          <a href="#internet-service"><b>ネット代が高い</b><span>光回線・Wi-Fiへ</span></a>
+          <a href="#housing-next"><b>住宅費が重い</b><span>住宅ローン・火災保険へ</span></a>
+          <a href="#insurance-check"><b>保険料が気になる</b><span>保障内容の確認へ</span></a>
+          <a href="#money-next"><b>あとで見返したい</b><span>LINE保存・PDFへ</span></a>
+        </div>
+      </section>
+
+      <section class="section compact-section comparison-section">
+        <p class="eyebrow">Best First</p>
+        <h2>まず確認しやすい順ランキング</h2>
+        <div class="ranking-list">
+          <a class="ranking-card rank-one" href="#sim-service">
+            <span>1</span>
+            <div><b>スマホ代</b><small>毎月の削減が見えやすく、比較しやすい</small></div>
+          </a>
+          <a class="ranking-card" href="#energy-service">
+            <span>2</span>
+            <div><b>電気・ガス</b><small>生活を変えずに契約確認から始めやすい</small></div>
+          </a>
+          <a class="ranking-card" href="#internet-service">
+            <span>3</span>
+            <div><b>ネット回線</b><small>スマホ割や不要オプションも確認しやすい</small></div>
+          </a>
+          <a class="ranking-card" href="#housing-next">
+            <span>4</span>
+            <div><b>住宅固定費</b><small>金額が大きく、長期コストの確認向き</small></div>
+          </a>
+        </div>
+
+        <div class="comparison-table-wrap">
+          <table class="comparison-table">
+            <thead>
+              <tr>
+                <th>項目</th>
+                <th>向いている人</th>
+                <th>最初に見ること</th>
+                <th>次の行動</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td><b>スマホ代</b></td>
+                <td>月8,000円以上、家族回線が多い</td>
+                <td>通信料・端末代・オプション</td>
+                <td><a href="#sim-service">スマホプランを比較</a></td>
+              </tr>
+              <tr>
+                <td><b>光熱費</b></td>
+                <td>電気・ガス・水道が月25,000円以上</td>
+                <td>契約会社・プラン・使用量</td>
+                <td><a href="#energy-service">電気・ガスを確認</a></td>
+              </tr>
+              <tr>
+                <td><b>ネット回線</b></td>
+                <td>ネット代が月6,000円以上</td>
+                <td>回線料金・ルーター代・更新月</td>
+                <td><a href="#internet-service">回線を確認</a></td>
+              </tr>
+              <tr>
+                <td><b>住宅固定費</b></td>
+                <td>住宅ローン、持ち家、火災保険更新前</td>
+                <td>金利・残期間・保険更新</td>
+                <td><a href="#housing-next">住宅固定費を見る</a></td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </section>
+
       <section class="section compact-section">
         <p class="eyebrow">Priority</p>
         <h2>収益化の優先順位</h2>
@@ -57,7 +135,8 @@
       </section>
 
       <section class="service-list" id="services">
-        <article class="service-card">
+        <article class="service-card service-card-ranked" id="sim-service">
+          <i>おすすめ 1</i>
           <span>優先度 1 / スマホ代</span>
           <h2>格安SIM・スマホプランの見直し</h2>
           <p>
@@ -71,7 +150,8 @@
           <a class="button primary" href="https://px.a8.net/svt/ejp?a8mat=4B3R31+2EXB3M+3UM0+5YRHE" data-link-key="simAffiliate" target="_blank" rel="noopener">スマホプランを比較する</a>
         </article>
 
-        <article class="service-card">
+        <article class="service-card service-card-ranked" id="insurance-service">
+          <i>確認候補</i>
           <span>優先度 2 / 保険</span>
           <h2>保険の保障内容チェック</h2>
           <p>
@@ -85,7 +165,8 @@
           <a class="button secondary" href="#insurance-check">保険料の確認ポイントを見る</a>
         </article>
 
-        <article class="service-card">
+        <article class="service-card service-card-ranked" id="energy-service">
+          <i>おすすめ 2</i>
           <span>優先度 3 / 光熱費</span>
           <h2>電気・ガス会社の切り替え</h2>
           <p>
@@ -102,7 +183,8 @@
           </div>
         </article>
 
-        <article class="service-card">
+        <article class="service-card service-card-ranked" id="internet-service">
+          <i>おすすめ 3</i>
           <span>優先度 4 / 通信費</span>
           <h2>インターネット回線の見直し</h2>
           <p>
@@ -119,7 +201,8 @@
           </div>
         </article>
 
-        <article class="service-card featured-card" id="housing-next">
+        <article class="service-card service-card-ranked featured-card" id="housing-next">
+          <i>高単価候補</i>
           <span>優先度 5 / 住宅固定費</span>
           <h2>住宅ローン・火災保険の確認</h2>
           <p>
@@ -136,7 +219,8 @@
           </div>
         </article>
 
-        <article class="service-card featured-card" id="money-next">
+        <article class="service-card service-card-ranked featured-card" id="money-next">
+          <i>再訪導線</i>
           <span>優先度 6 / 家計管理</span>
           <h2>家計管理アプリ・カード・証券口座</h2>
           <p>
@@ -182,16 +266,17 @@
 
       <section class="section compact-section">
         <p class="eyebrow">Next Setup</p>
-        <h2>ASPリンクを取ったら、ここだけ差し替え</h2>
+        <h2>今後リンクを増やすなら、ここだけ差し替え</h2>
         <div class="setup-list">
           <div><b>sim</b><span>格安SIM・スマホプラン</span></div>
           <div><b>insurance</b><span>保険見直し・保険比較</span></div>
           <div><b>energy</b><span>電気・ガス切り替え</span></div>
           <div><b>internet</b><span>ネット回線・Wi-Fi</span></div>
+          <div><b>fireInsurance / mortgage</b><span>火災保険・住宅ローン</span></div>
           <div><b>budget / creditCard / securities</b><span>家計管理アプリ・クレカ・証券口座</span></div>
         </div>
         <p class="notice">
-          掲載リンクは現在MVP用の仮リンクです。ASPで提携後、発行された広告URLに差し替えると、このページのボタンがそのまま収益導線になります。
+          すでに入っている広告リンクはこのページのボタンに反映されます。今後は承認済み案件だけを少しずつ追加し、広告感が強くなりすぎないようにします。
         </p>
       </section>
 
